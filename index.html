@@ -76,6 +76,16 @@ section{padding:96px 0;}
 /* SERVICES */
 .svc-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px;}
 .svc{background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:34px 30px; transition:transform .2s ease, border-color .2s ease;}
+#services{position:relative; overflow:hidden;}
+#services .sblob{position:absolute; width:420px; height:420px; border-radius:50%; filter:blur(90px); z-index:0; pointer-events:none; animation:float 16s ease-in-out infinite;}
+#services .sblob.a{background:radial-gradient(circle, rgba(184,217,106,.5), rgba(184,217,106,0) 70%); left:-140px; top:-60px;}
+#services .sblob.b{background:radial-gradient(circle, rgba(110,156,47,.35), rgba(110,156,47,0) 70%); right:-160px; bottom:-100px; animation-delay:-8s;}
+#services .wrap{position:relative; z-index:1;}
+#process{position:relative; overflow:hidden;}
+#process .sblob{position:absolute; width:420px; height:420px; border-radius:50%; filter:blur(90px); z-index:0; pointer-events:none; animation:float 16s ease-in-out infinite;}
+#process .sblob.a{background:radial-gradient(circle, rgba(184,217,106,.45), rgba(184,217,106,0) 70%); right:-140px; top:-70px; animation-delay:-4s;}
+#process .sblob.b{background:radial-gradient(circle, rgba(110,156,47,.32), rgba(110,156,47,0) 70%); left:-150px; bottom:-90px; animation-delay:-11s;}
+#process .wrap{position:relative; z-index:1;}
 .svc:hover{transform:translateY(-4px); border-color:var(--accent-deep);}
 .svc .no{font-family:var(--fd); font-weight:700; font-size:13px; color:var(--accent-deep); letter-spacing:.1em;}
 .svc h3{font-size:26px; margin:14px 0 10px; font-weight:700;}
@@ -207,11 +217,11 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
     <div class="blob"></div>
     <div class="blob two"></div>
     <div class="wrap">
-      <span class="eyebrow" data-en="The tech studio of MARU ART SPACE" data-ru="Tech-студия от MARU ART SPACE">The tech studio of MARU ART SPACE</span>
+      <span class="eyebrow" data-en="The tech wing of MARU ART SPACE" data-ru="Tech-крыло MARU ART SPACE">The tech wing of MARU ART SPACE</span>
       <h1><span data-en="Landing pages &amp; bots that " data-ru="Лендинги и боты, которые ">Landing pages &amp; bots that </span><span class="ac" data-en="sell" data-ru="продают">sell</span><span data-en=" while you sleep." data-ru=", пока вы спите.">&nbsp;while you sleep.</span></h1>
       <p data-en="Landing pages, chatbots and AI assistants for business — from idea to a finished site." data-ru="Лендинги, чат-боты и ИИ-ассистенты для бизнеса — от идеи до готового сайта.">Landing pages, booking chatbots and AI assistants for business — designed, built and shipped end-to-end.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-fill" data-en="Start a project" data-ru="Обсудить проект">Start a project</a>
+        <a href="https://t.me/Maruartspace" target="_blank" rel="noopener" class="btn btn-fill" data-en="Start a project" data-ru="Обсудить проект">Start a project</a>
         <a href="#work" class="btn btn-ghost" data-en="See the work" data-ru="Смотреть работы">See the work</a>
       </div>
     </div>
@@ -225,6 +235,8 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
 
   <!-- SERVICES -->
   <section id="services">
+    <div class="sblob a"></div>
+    <div class="sblob b"></div>
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow" data-en="What we do" data-ru="Что я делаю">What we do</span>
@@ -289,13 +301,13 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
             <span class="go" data-en="Open demo →" data-ru="Открыть демо →">Открыть демо →</span>
           </div>
         </a>
-        <a href="wraplab.html" target="_blank" rel="noopener" class="case reveal">
+        <a href="wraplab-es.html" target="_blank" rel="noopener" class="case reveal">
           <span class="case-tab"></span>
           <span class="case-mark">W</span>
           <div class="case-info">
-            <div class="case-tags"><span data-en="Landing" data-ru="Лендинг">Лендинг</span><span data-en="Premium" data-ru="Премиум">Премиум</span></div>
+            <div class="case-tags"><span data-en="Landing" data-ru="Лендинг">Лендинг</span><span data-en="Spain · 3 languages" data-ru="Испания · 3 языка">Испания · 3 языка</span></div>
             <h3>WRAPLAB</h3>
-            <p data-en="A landing page for a premium car-wrapping studio." data-ru="Лендинг студии премиальной оклейки авто.">Лендинг студии премиальной оклейки авто.</p>
+            <p data-en="A trilingual site for a premium car-wrapping studio in Spain — ES · EN · RU, WhatsApp booking." data-ru="Трёхъязычный сайт wrap-студии для рынка Испании — ES · EN · RU, запись через WhatsApp.">Трёхъязычный сайт wrap-студии для рынка Испании — ES · EN · RU, запись через WhatsApp.</p>
             <span class="go" data-en="Open demo →" data-ru="Открыть демо →">Открыть демо →</span>
           </div>
         </a>
@@ -305,6 +317,8 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
 
   <!-- PROCESS -->
   <section id="process">
+    <div class="sblob a"></div>
+    <div class="sblob b"></div>
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow" data-en="How it works" data-ru="Как это устроено">How it works</span>
@@ -326,7 +340,7 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
       <div class="reveal">
         <h2 data-en="Let's talk about your project." data-ru="Давайте обсудим ваш проект.">Let's build something that works.</h2>
         <p data-en="Tell me what you need — I'll come back with a solution and timeline." data-ru="Опишите задачу — предложу решение и сроки.">Tell me about your business — I'll tell you what would move the needle, honestly.</p>
-        <a href="mailto:maruartti@gmail.com" class="btn btn-fill" data-en="Start a project" data-ru="Обсудить проект">Start a project</a>
+        <a href="https://t.me/Maruartspace" target="_blank" rel="noopener" class="btn btn-fill" data-en="Start a project" data-ru="Обсудить проект">Start a project</a>
         <a href="https://maruartspace.github.io/" class="back2" data-en="MARU ART SPACE — back to the studio →" data-ru="MARU ART SPACE — вернуться в студию →">Part of MARU ART SPACE — back to the studio →</a>
       </div>
     </div>
@@ -419,8 +433,12 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
     });
   });
 
-  // русский по умолчанию
-  applyLang('ru');
+  // язык по умолчанию: ?lang=ru|en в ссылке, иначе по языку браузера
+  var qlang = new URLSearchParams(location.search).get('lang');
+  if(qlang !== 'ru' && qlang !== 'en'){
+    qlang = ((navigator.language||'').toLowerCase().indexOf('ru') === 0) ? 'ru' : 'en';
+  }
+  applyLang(qlang);
 })();
 
 // ===== AI ASSISTANT (работает вживую в Claude; на сайте — через ключ) =====
@@ -464,15 +482,6 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
 </script>
-<button class="asst-fab" id="asstFab" data-en="🤖 Ask AI" data-ru="🤖 Спросить ИИ">🤖 Спросить ИИ</button>
-<div class="asst" id="asst">
-  <div class="asst-head"><b><span class="dotlive"></span>MARU TECH · AI</b><button class="cl" id="asstClose" aria-label="Close">×</button></div>
-  <div class="asst-body" id="asstBody"></div>
-  <div class="asst-in">
-    <input id="asstInput" type="text" data-en-ph="Ask about services, prices…" data-ru-ph="Спросите про услуги, цены…" placeholder="Спросите про услуги, цены…" aria-label="Message" />
-    <button id="asstSend" aria-label="Send">➤</button>
-  </div>
-</div>
-
+<!-- ИИ-ассистент временно отключён. Чтобы вернуть: восстановить кнопку asstFab и панель asst из старой версии файла. -->
 </body>
 </html>
