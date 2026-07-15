@@ -117,13 +117,13 @@ const CONFIG = {
     { name:"Bath & blow-dry" },
     { name:"Hand stripping" },
     { name:"Nails & ears" },
-    { name:"Gift certificate", type:"gift", prompt:"What value should the certificate be?", amounts:[1500, 3000, 5000] },
+    { name:"Gift certificate", type:"gift", prompt:"What value should the certificate be?", amounts:[30, 50, 80] },
   ],
   // price depends on pet size
   sizes: [
-    { name:"Small (up to 5 kg)",   prices:{ "Full package":2500, "Hygiene trim":1500, "Bath & blow-dry":1200, "Hand stripping":2000, "Nails & ears":600 } },
-    { name:"Medium (5–15 kg)",  prices:{ "Full package":3500, "Hygiene trim":2200, "Bath & blow-dry":1800, "Hand stripping":2800, "Nails & ears":700 } },
-    { name:"Large (15 kg+)", prices:{ "Full package":4800, "Hygiene trim":3000, "Bath & blow-dry":2500, "Hand stripping":3800, "Nails & ears":800 } },
+    { name:"Small (up to 5 kg)",   prices:{ "Full package":45, "Hygiene trim":28, "Bath & blow-dry":22, "Hand stripping":40, "Nails & ears":12 } },
+    { name:"Medium (5–15 kg)",  prices:{ "Full package":60, "Hygiene trim":38, "Bath & blow-dry":30, "Hand stripping":50, "Nails & ears":14 } },
+    { name:"Large (15 kg+)", prices:{ "Full package":75, "Hygiene trim":48, "Bath & blow-dry":38, "Hand stripping":65, "Nails & ears":16 } },
   ],
   openHour: 10,     // opening hour
   closeHour: 20,    // closing hour
@@ -200,7 +200,7 @@ function buildTimes(){
   }
   return out;
 }
-function fmt(n){ return n.toLocaleString('ru-RU') + ' ₽'; }
+function fmt(n){ return n + ' €'; }
 function priceFor(sizeName, key){
   const s = CONFIG.sizes.find(x => x.name === sizeName);
   return s && typeof s.prices[key] === 'number' ? s.prices[key] : null;
