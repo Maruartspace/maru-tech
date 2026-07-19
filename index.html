@@ -361,8 +361,18 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
           </div>
         </a>
 
-              </div>
+        <a href="artful-oasis.html" target="_blank" rel="noopener" data-case="artful" class="case reveal">
+          <span class="case-tab"></span>
+          <span class="case-mark">A</span>
+          <div class="case-info">
+            <div class="case-tags"><span data-en="Landing page" data-ru="Лендинг">Лендинг</span><span data-en="Art · HoReCa" data-ru="Арт · HoReCa">Арт · HoReCa</span></div>
+            <h3>ARTFUL OASIS</h3>
+            <p data-en="A landing page for an art studio with wine &amp; paint sessions: formats, gallery, booking form." data-ru="Лендинг арт-студии с вечерами вина и живописи: форматы, галерея, форма бронирования.">Лендинг арт-студии с вечерами вина и живописи: форматы, галерея, форма бронирования.</p>
+            <span class="go" data-en="Open demo →" data-ru="Открыть демо →">Открыть демо →</span>
+          </div>
         </a>
+
+        
       </div>
     </div>
   </section>
@@ -448,9 +458,10 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
     document.querySelectorAll('[data-en-ph]').forEach(function(el){
       var v = el.getAttribute('data-'+l+'-ph'); if(v!==null) el.placeholder = v;
     });
-    var demos = { ru:{aura:'aura.html', groom:'groom.html'}, en:{aura:'aura-en.html', groom:'groom-en.html'} };
+    var demos = { ru:{aura:'aura.html', groom:'groom.html', artful:'artful-oasis-ru.html'}, en:{aura:'aura-en.html', groom:'groom-en.html', artful:'artful-oasis.html'} };
     var ca=document.querySelector('[data-case="aura"]'); if(ca) ca.href = demos[l].aura;
     var cg=document.querySelector('[data-case="groom"]'); if(cg) cg.href = demos[l].groom;
+    var ca2=document.querySelector('[data-case="artful"]'); if(ca2) ca2.href = demos[l].artful;
     document.documentElement.lang = l;
     // обновляем URL, чтобы при копировании ссылки сохранился выбранный язык
     var u = new URL(window.location); u.searchParams.set('lang', l); window.history.replaceState({}, '', u);
