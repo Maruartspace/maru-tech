@@ -96,7 +96,7 @@ section{padding:96px 0;}
 .work{background:var(--dark); color:var(--on-dark);}
 .work .eyebrow{color:var(--accent);}
 .work .sec-head p{color:var(--on-dark-mut);}
-.work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+
 .case{position:relative; overflow:hidden; background:var(--dark-card); border:1px solid var(--dark-border); border-radius:var(--r); display:flex; flex-direction:column; transition:transform .2s ease, border-color .2s ease;}
 .case:hover{transform:translateY(-4px); border-color:var(--accent);}
 .case-shot{height:64px; overflow:hidden; background:#0a0a0c; border-bottom:1px solid var(--dark-border);}
@@ -216,6 +216,14 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
 .lead-send{background:var(--accent-deep); color:#fff; border:none; border-radius:10px; padding:0 16px;
   font-size:16px; cursor:pointer;}
 @media(max-width:640px){.lead-panel{right:16px; bottom:80px;} .lead-fab{right:16px; bottom:16px;}}
+
+@media(max-width:900px){.cases-grid .case{width:calc(50% - 10px)}}
+@media(max-width:600px){.cases-grid .case{width:100%}}
+
+.work-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.work-grid .case{width:calc(33.333% - 14px);min-width:280px}
+@media(max-width:900px){.work-grid .case{width:calc(50% - 10px)}}
+@media(max-width:600px){.work-grid .case{width:100%}}
 </style>
 </head>
 <body>
@@ -265,6 +273,7 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
       <p data-en="Landing pages, chatbots and AI assistants for business — from idea to a finished site." data-ru="Лендинги, чат-боты и ИИ-ассистенты для бизнеса — от идеи до готового сайта.">Landing pages, booking chatbots and AI assistants for business — designed, built and shipped end-to-end.</p>
       <div class="hero-cta">
         <a href="https://t.me/Maruartspace" target="_blank" rel="noopener" class="btn btn-fill" data-en="Start a project" data-ru="Обсудить проект">Start a project</a>
+        <div class="cases-grid">
         <a href="#work" class="btn btn-ghost" data-en="See the work" data-ru="Смотреть работы">See the work</a>
       </div>
     </div>
@@ -300,7 +309,7 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
         <div class="svc reveal">
           <div class="no">03</div>
           <h3 data-en="AI assistants" data-ru="ИИ-ассистенты">AI assistants</h3>
-          <p data-en="A smart chat that understands plain language and answers in your brand's voice." data-ru="Умный чат, который понимает живую речь и отвечает голосом вашего бренда.">A smart chat that understands plain language and answers in your brand's voice.</p>
+          <p data-en="An AI-powered chatbot that answers your clients' questions about your business 24/7." data-ru="Чат-бот с искусственным интеллектом: отвечает клиентам на любые вопросы о вашем бизнесе 24/7.">An AI-powered chatbot that answers your clients' questions about your business 24/7.</p>
         </div>
         <div class="svc reveal">
           <div class="no">04</div>
@@ -324,7 +333,7 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
           <span class="case-tab"></span>
           <span class="case-mark">A</span>
           <div class="case-info">
-            <div class="case-tags"><span data-en="Landing" data-ru="Лендинг">Лендинг</span><span data-en="Booking bot" data-ru="Бот записи">Бот записи</span></div>
+            <div class="case-tags"><span data-en="Landing" data-ru="Лендинг">Лендинг</span><span data-en="Booking bot" data-ru="Бот записи">Бот записи</span><span>EN · RU</span></div>
             <h3>AURA</h3>
             <p data-en="A barbershop landing page with a built-in booking bot." data-ru="Лендинг барбершопа со встроенным ботом записи.">Лендинг барбершопа со встроенным ботом записи.</p>
             <span class="go" data-en="Open demo →" data-ru="Открыть демо →">Открыть демо →</span>
@@ -354,14 +363,14 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
           <span class="case-tab"></span>
           <span class="case-mark">L</span>
           <div class="case-info">
-            <div class="case-tags"><span data-en="WhatsApp bot" data-ru="WhatsApp-бот">WhatsApp-бот</span><span data-en="Interactive demo" data-ru="Интерактивное демо">Интерактивное демо</span></div>
+            <div class="case-tags"><span data-en="WhatsApp bot" data-ru="WhatsApp-бот">WhatsApp-бот</span></div>
             <h3>SALÓN LUNA</h3>
             <p data-en="A WhatsApp booking assistant for a beauty salon: try the chat as a client, then switch to the owner's calendar view. Interface simulation." data-ru="WhatsApp-ассистент записи для салона красоты: пройдите чат как клиент и переключитесь на календарь владельца. Симуляция интерфейса.">WhatsApp-ассистент записи для салона красоты: пройдите чат как клиент и переключитесь на календарь владельца. Симуляция интерфейса.</p>
             <span class="go" data-en="Open demo →" data-ru="Открыть демо →">Открыть демо →</span>
           </div>
         </a>
 
-        <a href="artful-oasis.html" target="_blank" rel="noopener" data-case="artful" class="case reveal">
+        <a href="artful-oasis.html" target="_blank" rel="noopener" class="case reveal">
           <span class="case-tab"></span>
           <span class="case-mark">A</span>
           <div class="case-info">
@@ -371,6 +380,7 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
             <span class="go" data-en="Open demo →" data-ru="Открыть демо →">Открыть демо →</span>
           </div>
         </a>
+        </div>
 
         
       </div>
@@ -458,10 +468,9 @@ footer{background:var(--dark); color:var(--on-dark); padding:56px 0 40px;}
     document.querySelectorAll('[data-en-ph]').forEach(function(el){
       var v = el.getAttribute('data-'+l+'-ph'); if(v!==null) el.placeholder = v;
     });
-    var demos = { ru:{aura:'aura.html', groom:'groom.html', artful:'artful-oasis-ru.html'}, en:{aura:'aura-en.html', groom:'groom-en.html', artful:'artful-oasis.html'} };
+    var demos = { ru:{aura:'aura.html', groom:'groom.html'}, en:{aura:'aura-en.html', groom:'groom-en.html'} };
     var ca=document.querySelector('[data-case="aura"]'); if(ca) ca.href = demos[l].aura;
     var cg=document.querySelector('[data-case="groom"]'); if(cg) cg.href = demos[l].groom;
-    var ca2=document.querySelector('[data-case="artful"]'); if(ca2) ca2.href = demos[l].artful;
     document.documentElement.lang = l;
     // обновляем URL, чтобы при копировании ссылки сохранился выбранный язык
     var u = new URL(window.location); u.searchParams.set('lang', l); window.history.replaceState({}, '', u);
